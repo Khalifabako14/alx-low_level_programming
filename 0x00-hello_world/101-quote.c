@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <unistd.h>
 /**
- * main - A program that prints a quote followed by a new line to the standard error
+ * main - A program that prints a quote by a new line to the standard error
  * Return: (1) always
  */
 int main(void)
