@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <stdlib.b>
+#include <stdlib.h>
 /**
  * main - Prints all possible different combinations of three digits.
  * Return: 0 (Successful)
