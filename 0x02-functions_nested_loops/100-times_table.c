@@ -8,5 +8,5 @@
 
 void print_times_table(int k)
 {
-	return (0);
+	return (k);
 }
