@@ -2,7 +2,7 @@
 
 /**
  * print_alphabet - Prints the alpha in lowercase
- * Return: Always 0(Sucess)
+ * Return: 0(Always)
  */
 
 void print_alphabet(void)
