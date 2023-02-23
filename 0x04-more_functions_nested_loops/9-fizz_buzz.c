@@ -1,5 +1,5 @@
-#include "main.h"
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * main - Prints the numbers from 1 to 100, followed by a new line
