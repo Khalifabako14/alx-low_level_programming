@@ -14,10 +14,9 @@ int main(void)
 	int i;
 	char f[] = "Fizz";
 	char b[] = "Buzz";
-	char fb[] = "Fizzbuzz";
+	char fb[] = "FizzBuzz";
 
 	for (i = 1; i <= 100; i++)
-
 	{
 		if (i == 100)
 			printf("%s", b);
