@@ -2,8 +2,8 @@ nclude "main.h"
 
 /**
  * print_line - Draws a straight line in the terminal
- * @n: number of times the character _ should be printed
- *Return: a straight line
+ * @n: number of times the character '_' should be printed
+ * Return: a straight line
  */
 
 
