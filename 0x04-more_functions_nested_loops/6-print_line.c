@@ -3,18 +3,23 @@ nclude "main.h"
 /**
  * print_line - Draws a straight line in the terminal
  * @n: number of times the character _ should be printed
+ *Return: a straight line
  */
+
 
 void print_line(int n)
 {
+	int k;
+
 	if (n <= 0)
 	{
 		_putchar('\n');
 	}
-	else{
-		int i;
+	else
+	{
+		int k;
 
-		for (i = 1; i <= n; i++)
+		for (k = 1; k <= n; k++)
 		{
 			_putchar('_');
 		}
