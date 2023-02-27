@@ -1,5 +1,5 @@
 #include "khalifa.h"
-
+#include <stdio.h>
 /**
  * rev_string - Function that reverses a string
  * @s: validate the character
