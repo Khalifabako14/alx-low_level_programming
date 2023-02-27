@@ -4,31 +4,25 @@
  * rev_string - Function that reverses a string
  * @s: validate the character
  */
-
 void rev_string(char *s)
 {
-	int k, len;
+	char tmp;
+	int i, len, len1;
 
-	char *begin, *end = s;
+	len = 0;
+	len1 = 0;
 
-	for (k = 0; s[k] != '\0' && s[k + 1] != '\0'; k++)
+	while (s[len] != '\0')
 	{
-		end++;
+		len++;
 	}
-	len = k + 1;
-	begin = s;
-	for (k = 0; k < len / 2; k++)
+
+	len1 = len - 1;
+
+	for (i = 0; i < len / 2; i++)
 	{
-		char x;
-
-		x = *end;
-
-		*end = *begin;
-
-		*begin = x;
-
-		begin++;
-		end--;
+		tmp = s[i];
+		s[i] = s[len1];
+		s[len1--] = tmp;
 	}
-	end[len + 1] = '\0';
 }
