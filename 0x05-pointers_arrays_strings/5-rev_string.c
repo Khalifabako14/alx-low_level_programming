@@ -3,22 +3,32 @@
 /**
  * rev_string - Function that reverses a string
  * @s: validate the character
- * Return: 0 (Succesful)
  */
 
 void rev_string(char *s)
 {
-	int k = 0, y = 0, Aux;
+	int k, len;
 
-	while (s[k] != '\0')
+	char *begin, *end = s;
+
+	for (k = 0; s[k] != '\0' && s[k + 1] != '\0'; k++)
 	{
-		k++;
+		end++;
 	}
-	k--;
-	while (k > y)
+	len = k + 1;
+	begin = s;
+	for (k = 0; k < len / 2; k++)
 	{
-		Aux = s[k];
-		s[k--] = s[y];
-		s[k++] = Aux;
+		char x;
+
+		x = *end;
+
+		*end = *begin;
+
+		*begin = x;
+
+		begin++;
+		end--;
 	}
+	end[len + 1] = '\0';
 }
