@@ -1,9 +1,9 @@
 #include "bako.h"
 
 /**
- * set_string - Function that sets the value of a pointer to a char
- * @s: pointer to pointer we need to set to
- * @to: string to set
+ * set_string - Sets the value of a pointer to a char
+ * @s: The Pointer
+ * @to: The String
  */
 
 void set_string(char **s, char *to)
