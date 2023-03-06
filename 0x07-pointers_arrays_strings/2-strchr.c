@@ -1,4 +1,4 @@
-nclude "bako.h"
+#include "bako.h"
 #include <stdio.h>
 
 /**
