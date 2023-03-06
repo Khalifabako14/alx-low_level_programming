@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "bako.h"
+#include "main.h"
 
 /**
  * print_diagsums - Function that prints the sum of the two diagonals
