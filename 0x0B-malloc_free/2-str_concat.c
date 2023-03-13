@@ -3,49 +3,48 @@
 #include <stdlib.h>
 
 /**
- * alloc_grid - Function that returns a pointer
- * to a 2 dimensional array of integers.
- * @width: This is the columns of the array
- * @height: This is the rows of the array
- * Return: Returns a pointer to a 2 dimensional array of integers.
+ * str_concat - Function that concatenates two strings.
+ * if NULL is passed, treat it as an empty string
  * The function should return NULL on failure
- * If width or height is 0 or negative, return NULL
+ * @s1: This is the output string
+ * @s2: This is the input string
+ * Return: The returned pointer should point to a newly allocated space in
+ * memory which contains the contents of s1, followed by the contents
+ * of s2, and null terminated
  */
 
-int **alloc_grid(int width, int height) /* 6 columns and 4 rows*/
+char *str_concat(char *s1, char *s2)
 {
-	int k, b;
-	int **arr;
+	int a, b;
+	int *s;
 
-	if (width < 1 || height < 1)
-		return (NULL);
-
-	arr = (int **)malloc(sizeof(int *) * height);
-
-	if (arr == NULL)
+	if (s1 == NULL)
 	{
-		free(arr);
-		return (NULL);
+		s1 = "";
 	}
 
-	for (b = 0; b < height; b++)
+	if (s2 == NULL)
 	{
-		arr[b] = malloc(sizeof(int) * width);
-		if (arr[b] == NULL)
-		{
-			for (b = 0; b < height; b++)
-			{
-				free(arr[b]);
-			}
-			free(arr);
-			return (NULL);
-		}
+		s2 = "";
 	}
+	for (a = 0; s1[a] != '\0'; a++)
+	{
+	}
+	for (b = 0; s2[b] != '\0'; b++)
+	{
+	}
+	s = (char *)  malloc(((a + b) + 1) * sizeof(char));
 
-	for (b = 0; b < height; b++)
-		for (k = 0; k < width; k++)
-		{
-			arr[b][k] = 0;
-		}
-	return (arr);
+	if (s == NULL)
+		return (NULL);
+	for (a = 0; s1[a] != '\0'; a++)
+	{
+		s[a] = s1[a];
+	}
+	for (b = 0; s2[b] != '\0'; b++)
+	{
+		s[a] = s2[b];
+		a++;
+	}
+	return (s);
 }
