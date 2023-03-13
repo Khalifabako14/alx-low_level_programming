@@ -19,7 +19,7 @@ int word_len(char *str)
 	while (*(str + k) && *(str + k) != ' ')
 	{
 		len++;
-		k++
+		k++;
 	}
 
 	return (len);
