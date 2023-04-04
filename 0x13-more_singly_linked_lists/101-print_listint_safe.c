@@ -15,7 +15,7 @@ size_t print_listint_safe(const listint_t *head);
 size_t looped_listint_len(const listint_t *head)
 {
 	const listint_t *khalifa, *bako;
-	size_t node = 1;
+	size_t nodes = 1;
 
 	if (head == NULL || head->next == NULL)
 		return (0);
@@ -30,7 +30,7 @@ size_t looped_listint_len(const listint_t *head)
 			khalifa = head;
 			while (khalifa != bako)
 			{
-				node++;
+				nodes++;
 				khalifa = khalifa->next;
 				bako = bako->next;
 			}
@@ -38,11 +38,11 @@ size_t looped_listint_len(const listint_t *head)
 			khaifa = khalifa->next;
 			while (khalifa != bako)
 			{
-				node++;
+				nodes++;
 				khalifa = khalifa->next;
 			}
 
-			return (node);
+			return (nodes);
 		}
 
 		khalifa = khalifa->next;
@@ -60,13 +60,13 @@ size_t looped_listint_len(const listint_t *head)
 
 size_t print_listint_safe(const listint_t *head)
 {
-	size_t node, index = 0;
+	size_t nodes, index = 0;
 
 	nodes = looped_listint_len(head);
 
 	if (node == 0)
 	{
-		for (; head != NULL; node++)
+		for (; head != NULL; nodes++)
 		{
 			printf("[%p] %d\n", (void *)head, head->n);
 			head = head->next;
@@ -75,7 +75,7 @@ size_t print_listint_safe(const listint_t *head)
 
 	else
 	{
-		for (index = 0; index < node; index++)
+		for (index = 0; index < nodes; index++)
 		{
 			printf("[%p] %d\n", (void *)head, head->n);
 			head = head->next;
@@ -84,5 +84,5 @@ size_t print_listint_safe(const listint_t *head)
 		printf("-> [%p] %d\n", (void *)head, head->n);
 	}
 
-	return (node);
+	return (nodes);
 }
